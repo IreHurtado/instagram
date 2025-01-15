@@ -1,0 +1,22 @@
+
+{% extends 'general/layout.html' %}
+
+{% block head_title %} Bienvenido a nuestro Insta {% endblock %}
+
+{% block page_content %} 
+
+<h1>'Bienvenido'</h1>
+
+<section>
+    <h2>Últimas publicaciones</h2>
+    <div class="row">
+    {% for post in last_posts %}
+        <div class="col-12 col-sm-6 col-md-4">    
+            {% include '_includes/posts/_post.html' %}
+        <hr class="hr"/>
+        </div>
+    {% endfor %}
+    </div>
+   
+</section>
+{% endblock %}
